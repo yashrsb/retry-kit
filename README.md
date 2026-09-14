@@ -2,16 +2,20 @@
 
 A small TypeScript utility for retrying failed asynchronous operations with exponential backoff.
 
+[![npm version](https://img.shields.io/npm/v/@yashrsb/retry-kit.svg)](https://www.npmjs.com/package/@yashrsb/retry-kit)
+[![npm downloads](https://img.shields.io/npm/dm/@yashrsb/retry-kit.svg)](https://www.npmjs.com/package/@yashrsb/retry-kit)
+[![License](https://img.shields.io/npm/l/@yashrsb/retry-kit.svg)](https://github.com/yashrsb/retry-kit/blob/main/LICENSE)
+
 ## Installation
 
 ```bash
-npm install retry-kit
+npm install @yashrsb/retry-kit
 ```
 
 ## Usage
 
 ```ts
-import { retry } from "retry-kit";
+import { retry } from "@yashrsb/retry-kit";
 
 const result = await retry(
   async () => {
@@ -28,7 +32,7 @@ const result = await retry(
 console.log(result);
 ```
 
-If the operation fails, `retry-kit` waits before trying again.
+If the operation fails, `@yashrsb/retry-kit` waits before trying again.
 
 With the configuration above, the base exponential delays are:
 
@@ -190,6 +194,12 @@ Build the package:
 ```bash
 npm run build
 ```
+
+## Package
+
+Published on npm:
+
+**[@yashrsb/retry-kit](https://www.npmjs.com/package/@yashrsb/retry-kit)**
 
 ## License
 
